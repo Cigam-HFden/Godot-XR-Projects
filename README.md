@@ -87,7 +87,6 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 1.	**Mixed Reality Extension SDK Godot**
 	-	Source:	https://github.com/dasg34/mixed-reality-extension-godot
-	-	Website:	
 	-	Info:	The Mixed Reality Extension Godot library is an easy way for developers to add User Generated Content (UGC) capabilities to their GodotEngine-based host apps
 	+	The Mixed Reality Extension SDK Godot library makes it easy for any Godot app or game to support user generated content (UGC) built with the Mixed Reality Extension SDK. It also makes it easy to test an MRE within a simple environment inside the Godot editor.
 	+	This project was forked from [Mixed Reality Extension Unity](https://github.com/Microsoft/mixed-reality-extension-unity).
