@@ -13,8 +13,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 ## Toolkits
 1.	**Godot XR Tools**
-	-.	Source:	https://github.com/GodotVR/godot-xr-tools
-	-.	Info:	Support scenes for AR and VR in Godot
+	-	Source:	https://github.com/GodotVR/godot-xr-tools
+	-	Info:	Support scenes for AR and VR in Godot
 	+	This repository contains a number of support files and support scenes that can be used together with the various AR and VR interfaces for the Godot game engine.
 	+	Versions
 		+	Official releases are tagged and can be found here.
@@ -29,8 +29,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	To combat this you will find a scene in this module called misc/VR_Common_Shader_Cache.tscn. Add this scene as a child node to your ARVRCamera. This will trigger the required shaders being compiled the first time your main scene loads.
 
 1.	**Godot XR Tools Demo**
-	-.	Source:	https://github.com/Malcolmnixon/godot-xr-tools-demo
-	-.	Info:	Demo project for Godot XR tools mechanics
+	-	Source:	https://github.com/Malcolmnixon/godot-xr-tools-demo
+	-	Info:	Demo project for Godot XR tools mechanics
 	+	Overview
 		+	This is a demo project to show off different godot-xr-tools movement mechanics.
 	+	Teleport Demo
@@ -54,8 +54,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 
 1.	**Godot_XR_Networking-Plus-Game**
-	-.	Source:	https://github.com/teddybear082/Godot_XR_Networking-Plus-Game
-	-.	Info:	A test of Godot, networking, XR-tools modifications and Pac-Man style gameplay
+	-	Source:	https://github.com/teddybear082/Godot_XR_Networking-Plus-Game
+	-	Info:	A test of Godot, networking, XR-tools modifications and Pac-Man style gameplay
 	+	INSTALLATION
 		+	Quest native - download APK and signature file to your hard drive, use sidequest's feature to install a local APK to your quest by selecting the files
 		+	PCVR/OpenXR - download the zip and unzip the directory anywhere. Run the .exe file. Your VR Software should boot up and start you in the game. In theory, should work with all VR headsets; tested with Quest / Virtual Desktop. You need a PCVR-ready PC.
@@ -69,8 +69,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 
 1.	**Godot VR Physics Template**
-	-.	Source:	https://github.com/jtnicholl/godot3-vr-physics-template
-	-.	Info:	Basic template for VR applications in Godot with physics interactions
+	-	Source:	https://github.com/jtnicholl/godot3-vr-physics-template
+	-	Info:	Basic template for VR applications in Godot with physics interactions
 	+	This is a basic template for a VR application in Godot with physical hands that interact with the environment, and cannot go through walls or other solid objects. The player can pick up items, and those too cannot be pushed through walls. It also provides other expected VR functionality such as turning and teleporting, as well as some other basic features for any application including loading settings at runtime from a config file.
 	+	Godot version 3.5 or later is required, this is because 3.5 introduced asynchronous shader compilation and shader caching. This prevents stuttering caused by shader compilation, which is a nuisance in normal desktop games but in VR it is severely nausea inducing.
 	+	Godot 4.0 is not supported. I intend to port this to 4.0 using its built-in OpenXR support in a separate repo later.
@@ -86,9 +86,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	For picking up an object, the hand node moves to the nearest grabbable point on the pickup and then the pickup is reparented to the hand. However, instead of just disabling collision on the picked up object, its collision bounds also get reparented to the hand. This effectively turns the object into an extension of the hand's collision bounds, keeping them together while also preventing them from passing through walls.
 
 1.	**Mixed Reality Extension SDK Godot**
-	-.	Source:	https://github.com/dasg34/mixed-reality-extension-godot
-	-.	Website:	
-	-.	Info:	The Mixed Reality Extension Godot library is an easy way for developers to add User Generated Content (UGC) capabilities to their GodotEngine-based host apps
+	-	Source:	https://github.com/dasg34/mixed-reality-extension-godot
+	-	Website:	
+	-	Info:	The Mixed Reality Extension Godot library is an easy way for developers to add User Generated Content (UGC) capabilities to their GodotEngine-based host apps
 	+	The Mixed Reality Extension SDK Godot library makes it easy for any Godot app or game to support user generated content (UGC) built with the Mixed Reality Extension SDK. It also makes it easy to test an MRE within a simple environment inside the Godot editor.
 	+	This project was forked from [Mixed Reality Extension Unity](https://github.com/Microsoft/mixed-reality-extension-unity).
 	+	Prerequisites
@@ -112,8 +112,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	For more information, please see the [Mixed Reality Extension SDK](https://github.com/Microsoft/mixed-reality-extension-sdk) repository's [README.md](https://github.com/Microsoft/mixed-reality-extension-sdk/blob/master/README.md) is the best source of information about features, current state, limitations, goal, major known issues, and roadmap.
 
 1.	**Godot-OpenVR-Controller-Template**
-	-.	Source:	https://github.com/Groguard/Godot-OpenVR-Controller-Template
-	-.	Info:	A basic Godot OpenVR controller template
+	-	Source:	https://github.com/Groguard/Godot-OpenVR-Controller-Template
+	-	Info:	A basic Godot OpenVR controller template
 	+	A basic Godot OpenVR controller template This was built using Godot 3.2 and the latest openvr addon from the assests library. I've made a few modifications to the default helper scenes to make some of the features in this demo work. If you update the scripts in this project, it will break.
 	+	Current Features
 		+	Picking up and dropping objects
@@ -127,8 +127,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	Can't walk up slopes
 
 1.	**Godot Oculus Quest Toolkit**
-	-.	Source:	https://github.com/NeoSpark314/godot_oculus_quest_toolkit
-	-.	Info:	An easy to use VR toolkit for Oculus Quest development using the Godot game engine
+	-	Source:	https://github.com/NeoSpark314/godot_oculus_quest_toolkit
+	-	Info:	An easy to use VR toolkit for Oculus Quest development using the Godot game engine
 	+	Features
 		+	Touch controller button handling and controller models
 		+	2D UI canvas with controller interaction and Virtual Keyboard
@@ -143,8 +143,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	Jog in Place detection
 
 1.	**Godot VR Toolkit**
-	-.	Source:	https://github.com/boku-ilen/godot-vr-toolkit
-	-.	Info:	A few useful nodes that should ease implementing VR in Godot. UI, Teleport and other useful tools.
+	-	Source:	https://github.com/boku-ilen/godot-vr-toolkit
+	-	Info:	A few useful nodes that should ease implementing VR in Godot. UI, Teleport and other useful tools.
 	+	VR-Locomotion using a efficent way for intuitive teleportation
 	+	Object-Interaction System
 		+	A superclass that is base on a rigidbody and can be extended, like described in the tutorial of https://github.com/GodotVR/godot_openvr_fps
@@ -159,8 +159,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	Vibration in the controller on hovering UI-elements
 
 1.	**Godot OpenVR FPS**
-	-.	Source:	https://github.com/GodotVR/godot_openvr_fps
-	-.	Info:	Repository for the OpenVR starter tutorial
+	-	Source:	https://github.com/GodotVR/godot_openvr_fps
+	-	Info:	Repository for the OpenVR starter tutorial
 	+	The tutorial covers how to create a first person shooter (FPS) VR game in Godot using GDscript. The project on this repository is the finished result of the Godot tutorial.
 	+	Safety notice
 	+	Virtual Reality (VR) can cause seizures, discomfort, and other problems for some individuals. Take breaks when required and follow the health and safety warnings for your Virtual Reality headset!
@@ -179,8 +179,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	And more!
 
 1.	**Godot XR Interaction Helpers**
-	-.	Source:	https://github.com/balintmaci/Godot-XR-Interaction-Helpers
-	-.	Info:	Plug-and-Play XR features
+	-	Source:	https://github.com/balintmaci/Godot-XR-Interaction-Helpers
+	-	Info:	Plug-and-Play XR features
 	+	This addon contains helper classes and example scenes for common XR related challenges. Currently it supports movement with or without collisions and physics, rotation of player around camera, setting orientation intuitively based on a combination of head orientation and hands position. Future version will add grab, touch, climbing, space physics, etc.
 	+	Dependencies:
 		+	Extra Math for GDScript
@@ -204,8 +204,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 ## Examples
 1.	**Godot XR Tools Experiments**
-	-.	Source:	https://github.com/Malcolmnixon/godot-xr-tools-experiments
-	-.	Info:	Experimental Project to evaluate and evolve new functionality for godot-xr-tools
+	-	Source:	https://github.com/Malcolmnixon/godot-xr-tools-experiments
+	-	Info:	Experimental Project to evaluate and evolve new functionality for godot-xr-tools
 	+	This repository contains a number of experimental scripts to evaluate functionality destined for the godot-xr-tools project.
 	+	Experiments
 		+	The following experiments are being evaluated before migration:
@@ -214,39 +214,39 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 			+	Fading based on collisions (E.G. to prevent looking through walls)
 
 1.	**godot-xr-virtual-keyboard-demo**
-	-.	Source:	https://github.com/Malcolmnixon/godot-xr-virtual-keyboard-demo
-	-.	Info:	Demo project showing of the experimental godot-xr-tools virtual keyboard
+	-	Source:	https://github.com/Malcolmnixon/godot-xr-virtual-keyboard-demo
+	-	Info:	Demo project showing of the experimental godot-xr-tools virtual keyboard
 
 1.	**godot-xr-doors**
-	-.	Source:	https://github.com/Malcolmnixon/godot-xr-doors
-	-.	Info:	Proposal for godot door mechanics
+	-	Source:	https://github.com/Malcolmnixon/godot-xr-doors
+	-	Info:	Proposal for godot door mechanics
 
 1.	**Godot_XR_networking-modular**
-	-.	Source:	https://github.com/teddybear082/Godot_XR_networking-modular
-	-.	Info:	Attempt at modular version of Godot_XR_networking by GoatChurchPrime
+	-	Source:	https://github.com/teddybear082/Godot_XR_networking-modular
+	-	Info:	Attempt at modular version of Godot_XR_networking by GoatChurchPrime
 	+	Attempt at modular (tool) version of Godot_XR_networking by GoatChurchPrime: https://github.com/goatchurchprime/Godot_XR_networking to insert into your OpenXR project.
 	+	This is a tempoarary repository, for review by GoatChurchPrime. If it works, any future work will be done on his repository, not this one.
 	+	This is a minimal working VR networking module using the https://github.com/goatchurchprime/godot_multiplayer_networking_workbench as the basis for connecting using one of the three godot networking protocols (enet, websocket or webrtc) and spawning player avatars into the space on connection. This works in Godot 3.4., and works with projects built for PCVR as well as Quest native.
 	+	It requires installation first of the OpenXR Asset Plugin and OpenXR-Tools asset plugin as described below into your project.
 
 1.	**Godot_XR_Tools_Bullet_Time**
-	-.	Source:	https://github.com/teddybear082/Godot_XR_Tools_Bullet_Time
-	-.	Info:	Provides slo-mo movement to player
+	-	Source:	https://github.com/teddybear082/Godot_XR_Tools_Bullet_Time
+	-	Info:	Provides slo-mo movement to player
 
 1.	**Godot_XR_JogInPlace_Locomotion**
-	-.	Source:	https://github.com/teddybear082/Godot_XR_JogInPlace_Locomotion
-	-.	Info:	Attempt at porting NeoSpark's Walk in Place Locomotion for use in Godot XR-Tools
+	-	Source:	https://github.com/teddybear082/Godot_XR_JogInPlace_Locomotion
+	-	Info:	Attempt at porting NeoSpark's Walk in Place Locomotion for use in Godot XR-Tools
 
 1.	**Godot XR Reference plugin**
-	-.	Source:	https://github.com/GodotVR/godot_xr_reference
-	-.	Info:	Reference implementation for Godot 4 XR plugins
+	-	Source:	https://github.com/GodotVR/godot_xr_reference
+	-	Info:	Reference implementation for Godot 4 XR plugins
 	+	This is a reference plugin to use as a base to implement XR plugins for Godot 4 and later.
 	+	This is a Work In Progress.
 
 1.	**VR Mobile Camera**
-	-.	Source:	https://github.com/OfficinePixel/vr_mobile_camera
-	-.	Website:	http://www.officinepixel.com/
-	-.	Info:	VR Camera for mobile headset/cardboard VR
+	-	Source:	https://github.com/OfficinePixel/vr_mobile_camera
+	-	Website:	http://www.officinepixel.com/
+	-	Info:	VR Camera for mobile headset/cardboard VR
 	+	VR Mobile Camera
 		+	This node plug-in for Gotot Engine enable a new kind of 3D camera, you can use it with phone vr headset or cardboard.
 		+	It provide screen split for stereoscopic vision and head tracking by using accelerometer and gyroscope sensor on the phone, if gyroscope is not found, magnetometer will be used as fall back.
@@ -270,8 +270,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		Fortunately Bastiaan Olij is working on Godot sources for implementing them.
 
 1.	**VR Streaming Overlay**
-	-.	Source:	https://github.com/beniwtv/vr-streaming-overlay
-	-.	Info:	SteamVR overlay for streamers on Linux/Windows
+	-	Source:	https://github.com/beniwtv/vr-streaming-overlay
+	-	Info:	SteamVR overlay for streamers on Linux/Windows
 	+	This is a SteamVR overlay for streamers on Linux/Windows. (Made using the awesome Godot game engine ;)
 	+	Note: The master on this repository is kept roughly in sync with Godot / Godot OpenVR master. For official releases of Godot please check the releases page and/or the respective branches.
 	+	Note: While this is also compiled for Windows at the moment, this is currently untested. Feedback is welcome here :)
@@ -287,8 +287,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	Trigger gesture to show/hide overlay (attached left/right hand)
 
 1.	**OVR Utils**
-	-.	Source:	https://github.com/CrispyPin/ovr-utils
-	-.	Info:	Overlay app for OpenVR/SteamVR on Linux/Windows made in Godot
+	-	Source:	https://github.com/CrispyPin/ovr-utils
+	-	Info:	Overlay app for OpenVR/SteamVR on Linux/Windows made in Godot
 	+	A cross-platform SteamVR overlay application that aims to have many useful tools available while in VR. Built using the Godot game engine, and the godot-openvr plugin to interact with the openvr SDK.
 	+	Installation
 		+	Grab the latest release for your OS from the releases section
@@ -303,9 +303,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	At the moment all interacions are done with the trigger buttons, this will use steamvr actions and be configurable in the future.
 
 1.	**Godot experiments**
-	-.	Source:	https://github.com/MrEliptik/godot_experiments
-	-.	Website:	https://mreliptik.carrd.co/
-	-.	Info:	Some 2D, 3D & VR experiments and tutorials in Godot 3
+	-	Source:	https://github.com/MrEliptik/godot_experiments
+	-	Website:	https://mreliptik.carrd.co/
+	-	Info:	Some 2D, 3D & VR experiments and tutorials in Godot 3
 	|  Type   |  Title | Description | Status |
 	:-----:|:-------:|:-------:|:-----------:|:------:|
 	|  VR | quest_playground | a project testing various things in VR for the Oculus Quest: handtracking, handtrackings physics | WIP 🛠
@@ -314,15 +314,15 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	|  VR | control_like_interaction | trying to recreate CONTROL like movement, and messing with area's gravity | DONE ✔
 
 1.	**GUI in VR in Godot**
-	-.	Source:	https://github.com/aaronfranke/godot-GUI-in-VR
-	-.	Info:
+	-	Source:	https://github.com/aaronfranke/godot-GUI-in-VR
+	-	Info:
 	+	Check this out on the Godot Asset Library: https://godotengine.org/asset-library/asset/900
 	+	Check out the demo on the Godot Asset Library: https://godotengine.org/asset-library/asset/604
 	+	Video demo: https://www.youtube.com/watch?v=Xrhje9RwLnU (this repo does not include the skybox)
 
 1.	**3DTV Module**
-	-.	Source:	https://github.com/BastiaanOlij/godot_3dtv
-	-.	Info:	Using the ARVR server implementation to implement support for 3D TVs and 3D monitors
+	-	Source:	https://github.com/BastiaanOlij/godot_3dtv
+	-	Info:	Using the ARVR server implementation to implement support for 3D TVs and 3D monitors
 	+	This GDNative module uses the AR/VR system to implement a stereo scopic camera setup that can be used for 3D TVs and 3D monitors. Currently it only supports side by side splitscreen.
 	+	Compiling this project
 		+	This module is dependent on godot-headers. Before compiling make sure it has been downloaded. If the godot_headers folder is empty the easiest way to do so is to run the following commands:
@@ -333,9 +333,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 			+	(change platform to linux or osx if appropriate)
 
 1.	**DurielsGodotUtilities**
-	-.	Source:	https://github.com/TheDuriel/DurielsGodotUtilities
-	-.	Website:	https://twitter.com/the_duriel
-	-.	Info:	A collection of useful Scripts, Scenes, Systems, and Templates for the Godot Game Engine.
+	-	Source:	https://github.com/TheDuriel/DurielsGodotUtilities
+	-	Website:	https://twitter.com/the_duriel
+	-	Info:	A collection of useful Scripts, Scenes, Systems, and Templates for the Godot Game Engine.
 	+	All content is MIT.
 	+	Like the content? Follow me on Twitter https://twitter.com/the_duriel or support my Patreon https://www.patreon.com/TheDuriel
 		+	`Classes/`, Standalone Classes of various nature.
@@ -354,8 +354,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	`addonsbasic/VRUI` is a UI in 3D implementation which allows interaction through mouse, and a virtual mouse pointer (raycast) for VR usage.
 
 1.	**LensDistortion**
-	-.	Source:	https://github.com/BastiaanOlij/LensDistortion
-	-.	Info:	Example for applying a lens distortion shader in Godot for Mobile VR
+	-	Source:	https://github.com/BastiaanOlij/LensDistortion
+	-	Info:	Example for applying a lens distortion shader in Godot for Mobile VR
 	+	Example for applying a lens distortion shader in Godot for Mobile VR
 	+	You can copy the files in Cameras into your own project to use the setup. This handles rendering two cameras to the correct viewports and handles preparing a distortion map to apply the lens effect.
 	+	The objects displayed in this demo scene are too close and you're eyes will probably hurt if you put this on.
@@ -365,38 +365,38 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	Godot 3.x: https://github.com/godotengine/godot/pull/7121
 
 1.	**godot-xr-hands-on**
-	-.	Source:	https://github.com/Jade1724/godot-xr-hands-on
-	-.	Info:	My first Godot XR hands on project
+	-	Source:	https://github.com/Jade1724/godot-xr-hands-on
+	-	Info:	My first Godot XR hands on project
 	+	To run this project, download it and install OpenXR Plugin locally on your machine.
 
 ---
 
 ## Demos
 1.	**Godot 4 OpenXR demo project**
-	-.	Source:	https://github.com/BastiaanOlij/godot4_openxr_demo
-	-.	Info:	Crappy test project to test Godot 4s OpenXR implementation with
+	-	Source:	https://github.com/BastiaanOlij/godot4_openxr_demo
+	-	Info:	Crappy test project to test Godot 4s OpenXR implementation with
 	+	What you are looking at is my absolutely crappy demo project for testing the OpenXR logic we're porting into Godot 4 core. Maybe one day it will evolve into a proper demo project (thats the hope). Contributions super welcome.
 	+	Use in combination with godotengine/godot#56394
 
 1.	**Godot VR Weapons demo**
-	-.	Source:	https://github.com/BastiaanOlij/godot-vr-weapons
-	-.	Info:	Supporting project for my vr weapons tutorial
+	-	Source:	https://github.com/BastiaanOlij/godot-vr-weapons
+	-	Info:	Supporting project for my vr weapons tutorial
 	+	This is a Godot demo project in support of my Godot VR weapons youtube tutorial videos: [Playlist)(https://www.youtube.com/playlist?list=PLe63S5Eft1KaIq9N5PsS5FA3pcLrh686y)
 	+	In order to run this project you will Godot 3.2 or later. It can be adopted to 3.1 with minor changes especially around the shaders.
 	+	Included in this repository is a custom windows build of the Godot OpenVR plugin with PR #30 applied. If you wish to run this project on another OS please compile from source code found here: https://github.com/GodotVR/godot_openvr
 	+	This repository also includes a copy of https://github.com/GodotVR/godot-xr-tools (formally vr-common).
 
 1.	**Godot Object Interaction in VR**
-	-.	Source:	https://github.com/BastiaanOlij/godot-object-interaction-vr
-	-.	Info:	Support files for my Object Interaction VR tutorial series
+	-	Source:	https://github.com/BastiaanOlij/godot-object-interaction-vr
+	-	Info:	Support files for my Object Interaction VR tutorial series
 	+	This repository contains the source code of the demo project used for the Object Interaction in VR tutorial series I have on my Youtube channel.
 	+	You can find those here:
 		+	[Part one](https://youtu.be/o6GIoO97vGQ)
 		+	[Part two](https://youtu.be/8yI05GVuQck)
 
 1.	**sandboxVR**
-	-.	Source:	https://github.com/the-dev-bin/sandboxVR
-	-.	Info:	
+	-	Source:	https://github.com/the-dev-bin/sandboxVR
+	-	Info:	
 	+	Update
 		+	This project is currently no longer being maintained as of 10/19/2020. The use of Godot engine for VR proved to be underwhelming and may be revisited at a later date.
 		+	This is a project for a hackathon, to build a sort of Gary's mod but for VR. The idea is this stands as a framework for building loadable mods. The major goals of this project were to offer an engine for VR dev that skips the need to worry about movement, and interaction with objects. This project as mentioned in the section below takes advantage of the Godot OpenVR module as the primary engine to allow for cross-platform capabilities.
@@ -416,9 +416,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 			+	The sword needs to have a better grab point so it is not in the middle of the sword
 
 1.	**Simula**
-	-.	Source:	https://github.com/SimulaVR/Simula
-	-.	Website:	https://simulavr.com/
-	-.	Info:	Linux VR Desktop
+	-	Source:	https://github.com/SimulaVR/Simula
+	-	Website:	https://simulavr.com/
+	-	Info:	Linux VR Desktop
 	+	[Simula](https://simulavr.com) is a VR window manager for Linux that runs on top of [Godot](https://godotengine.org/). It takes less than 1 minute to install.
 	+	*Video:* [Demonstration.](http://www.youtube.com/watch?v=FWLuwG91HnI)
 	+	*Compatibility:* Simula is officially compatible with SteamVR headsets equipped with Linux drivers (e.g. HTC Vive, HTC Vive Pro, & Valve Index).  We have also added experimental support to OpenXR headsets that have Monado drivers (e.g. North Star, OSVR HDK, and PSVR).  Some people have gotten the Oculus Rift S to run Simula via OpenHMD (see [here](https://github.com/OpenHMD/OpenHMD/issues/225#issuecomment-638454156)), though we have not officially tested this ourselves.
@@ -427,8 +427,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	*Origins:* Simula is a reimplementation fork of [motorcar](https://github.com/evil0sheep/motorcar). To read about motorcar, see *[Toward General Purpose 3D User Interfaces: Extending Windowing Systems to Three Dimensions](https://github.com/evil0sheep/MastersThesis/blob/master/thesis.pdf?raw=true)*
 
 1.	**PrinterfaceVR**
-	-.	Source:	https://github.com/FabLabSiegen/PrinterfaceVR
-	-.	Info:	A simple VR Interface in Godot for Prusa MK3 Printer over Octoprint
+	-	Source:	https://github.com/FabLabSiegen/PrinterfaceVR
+	-	Info:	A simple VR Interface in Godot for Prusa MK3 Printer over Octoprint
 	+	The VR Part of this Project is copied and pasted from 3 Projects to test my Octoprint Interface in VR combining two of the most exciting new technologies of the second decade of the 21 Century in an so far utterly useless but i.m.O. funny Fashion
 	+	The base Construct of the VR implementation is a bold copy from Bastiaan Olij's OpenVR Test scene for the Godot gameengine https://github.com/BastiaanOlij/godot_openvr
 	+	The 3D Printer is a lower-poly copy of the complete Prusa3d CAD model from jzkmath https://github.com/jzkmath/Original-Prusa-i3/tree/MK3
@@ -440,9 +440,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 ## Games
 1.	**VRWorkout**
-	-.	Source:	https://github.com/mgschwan/VRWorkout
-	-.	Website:	https://vrworkout.at/
-	-.	Info:	High-intensity virtual reality workout game
+	-	Source:	https://github.com/mgschwan/VRWorkout
+	-	Website:	https://vrworkout.at/
+	-	Info:	High-intensity virtual reality workout game
 	+	A virtual reality music workout game built with Godot Engine
 	+	The game sould be a physically engaging VR experience that is somewhat comparable to a short calisthenics workout (or a long one if you play for extended periods). Compared to other music games like Beat Saber and Box VR there should be more muscle groups activated due to the changes between standing, squatting, pushups, side planks, crunches, jumping and burpees.
 	+	But as with all games it is up to the player to actually work out and not cheat it's way through the movements. The only opponent in this game is the players body itself, if you really engage in it you will feel the exertion it brings with it.
@@ -457,16 +457,16 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	DISCLAIMER: Use at your own risk! This game does not check if you bump into your surroundings. Since this is a physical workout game there is lot's of movement which bears the risk of injury. You acknowledge that this software is free and you are using it at your own risk
 
 1.	**Scalhaven**
-	-.	Source:	https://github.com/MagniGames/Scalhaven
-	-.	Info:	Rogue-like VR FPS with a Steampunk style
+	-	Source:	https://github.com/MagniGames/Scalhaven
+	-	Info:	Rogue-like VR FPS with a Steampunk style
 	+	This project is meant to be imported in Godot 3.0 in order to function. The .gd scripts can be opened in any text editor.
 	+	Prerequisites
 		+	Godot 3.0
 
 1.	**Bike-Game**
-	-.	Source:	https://github.com/Faymoon/Bike-Game
-	-.	Website:	
-	-.	Info:	Little VR bike game with Godot Engine
+	-	Source:	https://github.com/Faymoon/Bike-Game
+	-	Website:	
+	-	Info:	Little VR bike game with Godot Engine
 	+	Build
 		+	Follow this [tutorial](https://docs.godotengine.org/en/stable/getting_started/workflow/export/android_custom_build.html#doc-android-custom-build) of the godot engine documentation.
 	+	VR setup
@@ -484,9 +484,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	I use a modified version of this [project](https://github.com/favarete/GodotBluetooth) which is under MIT license. I made a few changes in order to make it working with my project/Godot 3.2 and to debug. 
 
 1.	**Friday Night Funkin' VR**
-	-.	Source:	https://github.com/this-is-bennyk/Funkin-VR
-	-.	Website:	https://thisisbennyk.itch.io/funkin-vr
-	-.	Info:	Fanmade VR port of Friday Night Funkin'
+	-	Source:	https://github.com/this-is-bennyk/Funkin-VR
+	-	Website:	https://thisisbennyk.itch.io/funkin-vr
+	-	Info:	Fanmade VR port of Friday Night Funkin'
 	+	What the funk is this?
 		+	Friday Night Funkin' VR (FNFVR for short) is a unofficial / fanmade standalone VR port of Friday Night Funkin' (FNF), a rhythm game originally created for Ludum Dare 47 "Stuck in a Loop".
 		+	You can find the original FNF on [itch.io](https://ninja-muffin24.itch.io/funkin), [Newgrounds](https://www.newgrounds.com/portal/view/770371), and [GitHub](https://github.com/ninjamuffin99/Funkin).
@@ -502,9 +502,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	*And more now, and more to come!* The team is hard at work creating new stuff and making improvements to the stuff that's already there. In fact, this GitHub is open to bug reports and suggestions just for that purpose! 
 
 1.	**Boxday**
-	-.	Source:	https://github.com/MrEliptik/boxday
-	-.	Website:	https://mreliptik.itch.io/boxday
-	-.	Info:	
+	-	Source:	https://github.com/MrEliptik/boxday
+	-	Website:	https://mreliptik.itch.io/boxday
+	-	Info:	
 	+	Put boxes on the right conveyor belt to get points by matching the label color to the conveyor color. Be careful, there are garbage boxes that you should throw out. 
 	+	Boxes will spawn faster and faster infinitely, so stop whenever you want!
 	+	Made for the Quest 2 (should work on Quest 1) as a Secret Santa 2021 jam entry. 
@@ -516,9 +516,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	The game is very bare bone but I hope you can still find it funny. 
 
 1.	**Fugitive 3D**
-	-.	Source:	https://github.com/FugitiveTheGame/Fugitive3D
-	-.	Website:	https://stumpy-dog-studios.itch.io/fugitive-3d
-	-.	Info:	A retro multiplayer, objective based, hide and seek game.
+	-	Source:	https://github.com/FugitiveTheGame/Fugitive3D
+	-	Website:	https://stumpy-dog-studios.itch.io/fugitive-3d
+	-	Info:	A retro multiplayer, objective based, hide and seek game.
 	+	https://fugitivethegame.online/
 	+	Join our Discord: https://discord.gg/2qk2Spe
 	+	The sequel to the 2D game, Fugitive is here! And it's in 333 DDD
@@ -532,9 +532,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	Even runs on Android phones, so your one lame friend with no VR and no PC can still join in on the fun :P
 
 1.	**Escape From The Void**
-	-.	Source:	https://github.com/DoubleSept/eftv-demo
-	-.	Website:	https://doublesept.itch.io/escape
-	-.	Info:	Source only for demo, full game is closed source
+	-	Source:	https://github.com/DoubleSept/eftv-demo
+	-	Website:	https://doublesept.itch.io/escape
+	-	Info:	Source only for demo, full game is closed source
 	+	Demo version of [Escape From The Void](https://doublesept.itch.io/escape).
 	+	Game description
 		+	A VR Coop game in which one player, using the headset, has to describe his environment to the other player.
@@ -542,16 +542,16 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	Made for Godot 3.0
 
 1.	**DeltaPhi - ΔΦ**
-	-.	Source:	https://github.com/quendera/deltaphi
-	-.	Website:	https://cystyr.itch.io/deltaphi
-	-.	Info:	Play with microphone and headphones.
+	-	Source:	https://github.com/quendera/deltaphi
+	-	Website:	https://cystyr.itch.io/deltaphi
+	-	Info:	Play with microphone and headphones.
 	+	"From the street to the home, domestic space too must not escape our tentacles. So profoundly ingrained, domestic space has been deemed impossible to disembed, where the home as norm has been conflated with home as fact, as an unremarkable given. Stultifying ‘domestic realism’ has no home on our horizon. Let us set sights on augmented homes of shared laboratories, of communal media and technical facilities. The home is ripe for spatial transformation as an integral component in any process of feminist futurity. But this cannot stop at the garden gates. We see too well that reinventions of family structure and domestic life are currently only possible at the cost of either withdrawing from the economic sphere—the way of the commune—or bearing its burdens manyfold—the way of the single parent. The task before us is twofold, and our vision necessarily stereoscopic: we must engineer an economy that liberates reproductive labour and family life, while building models of familiality free from the deadening grind of wage labour. "
 	+	-- Laboria Cuboniks
 
 1.	**Blöcks by Kosmos School**
-	-.	Source:	https://github.com/kosmosschool/blocks
-	-.	Website:	https://kosmosschool.itch.io/blocks
-	-.	Info:	Build electrical circuits to master challenges in VR.
+	-	Source:	https://github.com/kosmosschool/blocks
+	-	Website:	https://kosmosschool.itch.io/blocks
+	-	Info:	Build electrical circuits to master challenges in VR.
 	+	Blöcks is a VR puzzle game made for the Oculus Quest. Build electrical circuits with different Blocks to master increasingly difficult challenges. This is a free early alpha release and the game is not in active development.
 	+	🍕 Challenges
 	+	Each Challenge has objectives that require you to measure a certain current (Ampere) or voltage (Volts). To successfully complete a challenge, you need to build a circuit with the available Blocks and make sure it has the right current and voltage.
@@ -562,23 +562,23 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	If you have any questions, or want permission to use our code differently, please contact us: canolcer@hey.com
 
 1.	**Snap Blocks**
-	-.	Source:	https://github.com/kosmosschool/snap-blocks
-	-.	Website:	https://kosmosschool.itch.io/snap-blocks
-	-.	Info:	Snap Blocks lets you build whatever you desire with colorful blocks.
+	-	Source:	https://github.com/kosmosschool/snap-blocks
+	-	Website:	https://kosmosschool.itch.io/snap-blocks
+	-	Info:	Snap Blocks lets you build whatever you desire with colorful blocks.
 	+	Snap Blocks lets you build whatever you desire with colorful blocks in VR.
 	+	You don’t need to be Picasso to be creative. Snapping blocks together is fun and easy, and the only limit is your imagination.
 	+	The game is an early version and not in active development.
 
 1.	**Rhythm Thrower**
-	-.	Source:	https://gitlab.com/yxt0531/rhythm-thrower
-	-.	Website:	https://yxt0531.itch.io/rhythm-thrower
-	-.	Info:	Rhythm dart game for Oculus Quest with hand tracking support.
+	-	Source:	https://gitlab.com/yxt0531/rhythm-thrower
+	-	Website:	https://yxt0531.itch.io/rhythm-thrower
+	-	Info:	Rhythm dart game for Oculus Quest with hand tracking support.
 	+	Follow the rhythm to throw darts, the closer throw to a beat, the higher score gets, the more accurate throw to the target, the higher score gets.
 
 1.	**Pig Poppa**
-	-.	Source:	https://github.com/elocnatsirt/pigpoppa
-	-.	Website:	https://elocnat.itch.io/pigpoppa
-	-.	Info:	A VR game created for Godot Wild Jam #22. Play it on itch.io:
+	-	Source:	https://github.com/elocnatsirt/pigpoppa
+	-	Website:	https://elocnat.itch.io/pigpoppa
+	-	Info:	A VR game created for Godot Wild Jam #22. Play it on itch.io:
 	+	OBJECTIVE
 		+	In Pig Poppa your goal is to collect all of the different colored spray paint cans hidden around the level.
 		+	Use your spray cans to paint cool graffiti art! Explore the park and eliminate any angry little pigs that get in your way.
@@ -591,16 +591,16 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 			+	Press/Hold the trigger to use items
 
 1.	**Ataito: The Spirit Swapper**
-	-.	Source:	https://github.com/Malcolmnixon/Ataito-Game
-	-.	Website:	https://malcolmnixon.itch.io/ataito-the-spirit-swapper
-	-.	Info:	Global Game Jam 2022 Submission - Ataito: The Spirit Swapper
+	-	Source:	https://github.com/Malcolmnixon/Ataito-Game
+	-	Website:	https://malcolmnixon.itch.io/ataito-the-spirit-swapper
+	-	Info:	Global Game Jam 2022 Submission - Ataito: The Spirit Swapper
 	+	A spirit walker must use both his forms to collect all the spirit orbs.
 	+	Take your time first, and then try to beat your time!
 
 1.	**Deep Space Immersion**
-	-.	Source:	https://github.com/pkowal1982/DeepSpaceImmersion
-	-.	Website:	https://pkowal1982.itch.io/deep-space-immersion
-	-.	Info:	
+	-	Source:	https://github.com/pkowal1982/DeepSpaceImmersion
+	-	Website:	https://pkowal1982.itch.io/deep-space-immersion
+	-	Info:	
 	+	Game and test project for using webcam on Linux with Godot Engine.
 	+	Deep Space Immersion aims at tracking your head without any special gear and making it fast and cheap, so it can run on older hardware. You can try to use color sticker note or ping-pong ball. Notes are easier to attach but tend to change their color when tilted so balls can prove a better alternative.
 	+	Choose marker with contrasting color, green and blue will do nicely, assuming you don't have anything that color in the background.
@@ -608,9 +608,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	Windows version does not provide head tracking.
 
 1.	**Quest Arena**
-	-.	Source:	https://gitlab.com/yxt0531/vr-arena-quest
-	-.	Website:	https://yxt0531.itch.io/quest-arena
-	-.	Info:	
+	-	Source:	https://gitlab.com/yxt0531/vr-arena-quest
+	-	Website:	https://yxt0531.itch.io/quest-arena
+	-	Info:	
 	+	A voxel style arena shooter for Oculus Quest, bringing back old-time fun to VR. It's simple, just grab a gun and shoot anything that moves. And yes, you can dual wield shotguns too.
 	+	Dedicated server program for Quest Arena.
 		+	https://gitlab.com/yxt0531/quest-arena-server
@@ -618,16 +618,16 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	https://gitlab.com/yxt0531/no.-7-club-benchmark-tool
 
 1.	**Beep Saber**
-	-.	Source:	https://github.com/NeoSpark314/BeepSaber
-	-.	Info:	A basic implementation of the Beat Saber VR game mechanic in the Godot Game Engine for Oculus Quest (and other VR headsets)
+	-	Source:	https://github.com/NeoSpark314/BeepSaber
+	-	Info:	A basic implementation of the Beat Saber VR game mechanic in the Godot Game Engine for Oculus Quest (and other VR headsets)
 	+	This is a basic implementation of the beat saber game mechanic for VR using the Godot Game Engine and the Godot Oculus Quest Toolkit. The main objective of this project is to show how a VR game can be implemented using the Godot game engine.
 	+	The main target platform is the Oculus Quest but it should also work with SteamVR if you add the OpenVR plugin to the addons folder in the godot project.
 	+	Originally this game was (and still is) a demo game as part of the Godot Oculus Quest Toolkit. To keep the demo implementation small this stand alone version was forked so that it can be changed and developed independent of the original demo.
 
 1.	**Voxel Works Quest**
-	-.	Source:	https://github.com/NeoSpark314/VoxelWorksQuest
-	-.	Website:	https://neospark314.itch.io/voxel-works-quest
-	-.	Info:	A prototype for Jog-In-Place locomotion on Oculus Quest using the Godot game engine to explore an infinite procedurally generated voxel world.
+	-	Source:	https://github.com/NeoSpark314/VoxelWorksQuest
+	-	Website:	https://neospark314.itch.io/voxel-works-quest
+	-	Info:	A prototype for Jog-In-Place locomotion on Oculus Quest using the Godot game engine to explore an infinite procedurally generated voxel world.
 	+	Mine and craft in 6DoF, but it's real work.
 	+	This is the full source code of the prototype Oculus Quest game Voxel Works Quest (https://neospark314.itch.io/voxel-works-quest or https://sidequestvr.com/#/app/431).
 	+	As this was intended as a quick prototype for jog in place locomotion the code is not very clean yet and a lot of shortcuts were taken during development. Feel free to dig into the details here but do not expect it to be a good reference on how to build a VR game.
@@ -638,8 +638,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 ## Ports
 1.	**WOLF3D-Godot**
-	-.	Source:	https://github.com/BenMcLean/WOLF3D-Godot
-	-.	Info:	Wolfenstein 3-D recreated in Godot Mono for the Oculus Quest
+	-	Source:	https://github.com/BenMcLean/WOLF3D-Godot
+	-	Info:	Wolfenstein 3-D recreated in Godot Mono for the Oculus Quest
 	+	Everything in this repo is still a work in progress: the game is not playable yet.
 	+	This project aims to re-create the experience of the classic 1992 first person shooter game Wolfenstein 3-D and other games running on the same engine (Spear of Destiny and Super 3-D Noah's Ark) for virtual reality, ultimately to make these old games playable on the Oculus Quest in true stereoscopic 3D. Also supporting PC VR.
 	+	There has already been an admirable effort at recreating Wolfenstein 3-D in VR so anyone who just wants to play the game in VR right now on their PC should check that version out. However, in my view, that version leaves some gaps which this project aims to fill in:
@@ -651,9 +651,9 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	At this time, I do NOT plan to work on support for Blake Stone, Corridor 7 or Rise of the Triad.
 
 1.	**Deathchase VR**
-	-.	Source:	https://github.com/SteveSmith16384/DeathchaseVR
-	-.	Website:	https://stephensmith.itch.io/deathchase-vr
-	-.	Info:	
+	-	Source:	https://github.com/SteveSmith16384/DeathchaseVR
+	-	Website:	https://stephensmith.itch.io/deathchase-vr
+	-	Info:	
 	+	If the above game doesn't work, try https://stevesmith16384.bitbucket.io/deathchasevr/DeathchaseVR.html instead.   I don't think Itch properly handles WebXR pages.
 	+	Finally, you can experience the adrenaline rush that is Deathchase in VR.  Based on the classic ZX Spectrum game (voted #1 in the last issue of Your Sinclair) you can race through the forest shooting enemy bikers, tanks and helicopters.  This version is quite basic at the moment, but if I get any feedback I'll add more features.
 	+	This game is created in WebXR so it should work most headsets, apart from PSVR and Rift (that I know of).  The only controls are pointing your controller to turn left and right, and press the button to accelerate and shoot. 
@@ -664,8 +664,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 ## Unsure Source
 
 1.	**The Impossible Crypt**
-	-.	Website:	https://neospark314.itch.io/the-impossible-crypt
-	-.	Info:	
+	-	Website:	https://neospark314.itch.io/the-impossible-crypt
+	-	Info:	
 	+	The Impossible Crypt is a game prototype to test the use of Impossible Spaces for VR Dungeon Crawling on the Oculus Quest using only real physical locomotion.
 	+	Note that this is a very early prototype. There is no game-play or objective yet and you can only walk around the simple generated dungeon.
 	+	The game uses a tile-based generation algorithm to create overlapping dungeon layouts in a limit space. For the algorithm to work properly you need at least 2.5m x 2.5m of free space (better are >= 3.5m x 3.5m). 
@@ -673,8 +673,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	The main inspiration for this comes from the 2013 paper Flexible Spaces: https://www.ims.tuwien.ac.at/projects/flexible-spaces and also from the amazing work done by Void Room in Tea for God: https://void-room.itch.io/tea-for-god.
 
 1.	**DestCraft**
-	-.	Website:	https://zapina.itch.io/destcraft
-	-.	Info:	An Voxel Game like mine craft ..... 
+	-	Website:	https://zapina.itch.io/destcraft
+	-	Info:	An Voxel Game like mine craft ..... 
 	+	FEATURES - 
 		+	Minecraft like Environment
 		+	Basic Functionalities
@@ -686,8 +686,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	Available for Windows and Linux.
 
 1.	**While Waiting**
-	-.	Website:	https://zattstudio.itch.io/while-waiting
-	-.	Info:	Trust the process.
+	-	Website:	https://zattstudio.itch.io/while-waiting
+	-	Info:	Trust the process.
 	+	While Waiting is a single-player story and exploration game which utilises one single space to reveal a fascinating story to you, the player. You play as Henry, a young man who revisits his old life to find out things he never wanted to find out. You will help him to find his way through his various mental stages. The story for the game is written by Rebecca Gao. The voices of Dena Darvish Derakhshan and Jennifer Will and others make it a unique adventure for everyone.
 	+	Words from the writer:
 		+	The making of "While waiting" was a process of creating a puzzle where the task of putting all the pieces back together became the reward in of itself. To tell the tale of a single individual's life through small fragments were both a challenge and a true joy. I, as the writer, hope that you get to know Henry and explore and grow alongside him. Remember - trust the process.
@@ -697,44 +697,44 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 		+	https://www.instagram.com/makegao/
 
 1.	**Shagon Daungon**
-	-.	Website:	https://pietru.itch.io/shagon-daungon
-	-.	Info:	This is Demo/Prototype to see feedback on the project.
+	-	Website:	https://pietru.itch.io/shagon-daungon
+	-	Info:	This is Demo/Prototype to see feedback on the project.
 	+	Escape the dungon that you have woken inside of. 
 	+	Use climbing and jumping to get out from here.
 	+	This game requires VR headset to play.
 	+	It is not long but I had fun making it so I wish you fun while playing it.
 
 1.	**This. Is. Not. Working.**
-	-.	Website:	https://puchik.itch.io/this-is-not-working
-	-.	Info:	
+	-	Website:	https://puchik.itch.io/this-is-not-working
+	-	Info:	
 	+	A sound-driven VR game created for a sound design class about a student who  is taking a sound design class and trying to finish her project.
 	+	Dive into the mind of a student in the last few days before a project deadline.
 	+	The focus of this project is the creation of an immersive auditory environment and an interactive and reactive sound system.
 
 1.	**Menace Probe**
-	-.	Website:	https://nickofthesouth.itch.io/menace-probe
-	-.	Info:	You are tasked with investigating a mysterious device with an unknown origin.
+	-	Website:	https://nickofthesouth.itch.io/menace-probe
+	-	Info:	You are tasked with investigating a mysterious device with an unknown origin.
 
 1.	**T3ngist**
-	-.	Website:	https://stormplay.itch.io/t3ngist
-	-.	Info:
+	-	Website:	https://stormplay.itch.io/t3ngist
+	-	Info:
 	+	T3ngist is a First Person Shooter game, made to test the mechanics got my other games, just to make sure that they're not awful.
 	+	So giving us feedback would be really appreciated!
 
 1.	**Super Generic Shmup (VR)**
-	-.	Website:	https://goofyblocks.itch.io/super-generic-shmup
-	-.	Info:	
+	-	Website:	https://goofyblocks.itch.io/super-generic-shmup
+	-	Info:	
 	+	As a test to learn more about vr game development i made a simple space alien shooter. alien portals have started to appear in the city, and only you can save the day...for some reason. it's a little buggy, i haven't gotten motion sick from playing but there is some frame stutter if you kill enemies too fast and shoot excessive bullets.
 
 1.	**Speedroom**
-	-.	Website:	https://theklin.itch.io/speedroom
-	-.	Info:	Run and Gun!
+	-	Website:	https://theklin.itch.io/speedroom
+	-	Info:	Run and Gun!
 	+	Grab your guns, shoot all targets, and complete time trials as fast as you can. And then try to do it faster!
 	+	The game provides online rankings, you can compare your times and find someone to beat.
 
 1.	**Iso Bowling VR**
-	-.	Website:	https://stuarta0.itch.io/iso-bowling-vr
-	-.	Info:	
+	-	Website:	https://stuarta0.itch.io/iso-bowling-vr
+	-	Info:	
 	+	Can’t go out? Throw bowling balls at your neighbours instead!
 	+	Knock over all the pins in the least number of throws and you win!
 	+	Controls
@@ -745,16 +745,16 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	Developed during the COVID-19 lockdown for the Tas Jam @ Home game jam with the theme: distance/proximity. Italians had been seen to sing songs on their balconies or even play tennis from rooftop to rooftop. Since I'd rediscovered Wii Sports bowling, I thought I'd combine the two and make VR bowling between Italian apartments :)
 
 1.	**Tiled Land**
-	-.	Website:	https://andreterra.itch.io/tiled-land
-	-.	Info:	I found some awesome cc assets and put this apk together.
+	-	Website:	https://andreterra.itch.io/tiled-land
+	-	Info:	I found some awesome cc assets and put this apk together.
 
 1.	**VR Orb Shooter**
-	-.	Website:	https://khrisf999.itch.io/vr-orb-shooter
-	-.	Info:	Shoot and slash pink floating orbs.
+	-	Website:	https://khrisf999.itch.io/vr-orb-shooter
+	-	Info:	Shoot and slash pink floating orbs.
 
 1.	**Five Nights Among Us:VR**
-	-.	Website:	https://teemolert.itch.io/fnauvr
-	-.	Info:	
+	-	Website:	https://teemolert.itch.io/fnauvr
+	-	Info:	
 	+	Hey Hey Hey Crewmate, you survived 5 nights on the Skeld once, 
 	+	can you do it again in VR?
 	+	Please leave a rating of the game once you play it.
@@ -763,12 +763,12 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	Have fun :) 
 
 1.	**Far Stars Prototype (Godot Engine)**
-	-.	Website:	https://ceredev.itch.io/far-stars-prototype-godot-engine
-	-.	Info:	This is the same prototype of Far Stars (made in Unity) but in Godot Engine.
+	-	Website:	https://ceredev.itch.io/far-stars-prototype-godot-engine
+	-	Info:	This is the same prototype of Far Stars (made in Unity) but in Godot Engine.
 
 1.	**Watch Grass Grow**
-	-.	Website:	https://aresiel.itch.io/grass
-	-.	Info:	
+	-	Website:	https://aresiel.itch.io/grass
+	-	Info:	
 	+	Imagine watching grass grow IN VIRTUAL REALITY!!! Discord server [here](https://discord.gg/zhyM3Ut).
 	+	I lost the files for this, so development canceled! I recommend [this](https://fr0z3nr.itch.io/grass-watching-simulator-2017-vr) instead as it's probably a lot better.
 	+	There's also an web version, which is partially work in progress. 
@@ -776,8 +776,8 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	Made with [Godot](https://godotengine.org/).
 
 1.	**RoomWithAView**
-	-.	Website:	https://ark1ve.itch.io/roomwithaview
-	-.	Info:	Room With A View is a VR room builder game.
+	-	Website:	https://ark1ve.itch.io/roomwithaview
+	-	Info:	Room With A View is a VR room builder game.
 	+	Recreate your physical room in VR. Place animated posters on the wall, lay on your couch, interact with your computer desktop in the palm of your hand or on a 70 inch screen.
 		+	Use elevators to make a floor for digital painting, another for not exercising in, a third for your home cinema! Change your environment from a selection of dynamic places, maybe overlooking a beach boardwalk, or a private forest, or outerspace.
 		+	Full desktop interaction is supported; why recreate applications for VR when there's already a giant eco system of infinitely better applications out there. Open Gimp or Krita to use a VR screen as a touch sensitive canvas. Watch your favorite videos with VLC or youtube.
