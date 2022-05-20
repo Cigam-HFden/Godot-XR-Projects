@@ -228,6 +228,119 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	This is a minimal working VR networking module using the https://github.com/goatchurchprime/godot_multiplayer_networking_workbench as the basis for connecting using one of the three godot networking protocols (enet, websocket or webrtc) and spawning player avatars into the space on connection. This works in Godot 3.4., and works with projects built for PCVR as well as Quest native.
 	+	It requires installation first of the OpenXR Asset Plugin and OpenXR-Tools asset plugin as described below into your project.
 
+1.	**Godot Multiplayer networking workbench**
+	-	Source:	https://github.com/goatchurchprime/godot_multiplayer_networking_workbench
+	-	Info:	
+	+	This utility exposes the workings of the three highlevel multiplayer networking protocols (ENet, Websockets, and WebRTC) and has hooks to enable VR players to compress, transmit, unpack and interpolate their avatar movements across the network.
+	+	Installation
+		+	https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerpeer.html#class-networkedmultiplayerpeer
+		+	download the webrtc libraries from here an put into webrtc directory: https://github.com/godotengine/webrtc-native/releases
+	+	Operation
+		+	The NetworkGateway scene runs the entire process and is composed of a tree of UI Control nodes that can be used directly to visualize the state for debugging, or hidden behind another conventional multiplayer UI such as a lobby.
+		+	The main script NetworkGateway.gd manages the choice of protocol and the connections, while PlayerConnections.gd manages the players spawning and removal.
+	+	Network connecting
+		+	The toy example included is an ineffective pong game with the network provisioning code in the JoystickControls.gd script. We connect using WebRTC at startup so it works out of the box. This is done with the call to NetworkGateway.initialstatemqttwebrtc()
+		+	Signalling is all done through the the public broker connected to HiveMQ and you can sniff out all the signals if you run the command:
+			+	mosquitto_sub -h mqtt.dynamicdevices.co.uk -t "tomato/#" -v
+		+	This dumps everything in the room tomato to the command line. You can choose other rooms, so that connection can be like jit.si.
+		+	The use of a public MQTT broker to initiate the connections means we can set the connection to "As necessary", which means that if there's live server on the channel it starts out as a server, otherwise it starts as a client and connects to it. (Automatic handover code for when the server drops out is partly working, but unreliable, and could be finished if there is a sufficient use-case.)
+		+	You can select a different protocol (ENet or Websockets) when the Network is off, and then select server or client. There will be UDP packets sent by the server to help any clients on the same router network to find and connect to it without needing to look up the local IP number. (Or you can set this running on a external server with a fixed IP number on the internet)
+	+	Players
+		+	By default it uses the path /root/Main/Players as the node that keeps the players together, and considers the first node in there as the LocalPlayer.
+		+	The LocalPlayer gets a PlayerFrame node the the PlayerFrameLocal.gd script associated to it.
+		+	Any remote players that are created are included with the same, but with the PlayerFrameRemote.gd script attached to it. These are the scripts which receive the player motions generated locally and unpack and animate the player motions remotely.
+		+	These PlayerFrame nodes are what all the rpc() calls are made against. The Player nodes are given consistent names across the network based on the networkID so that these rpc() calls, which depend on finding the same node in the tree across different instances in the game, are able to work.
+		+	The script attached to the Player (the node containing the PlayerFrame that visualizes the avatar) must have the following functions:
+			+	func initavatarlocal(): Called at startup on the LocalPlayer
+			+	func initavatarremote(avatardata): Called when a new RemotePlayer is created in the Players node
+			+	func avatarinitdata() -> avatardata: The dict of data called on the LocalPlayer and sent to the function above
+			+	func playername(): Used in the Networking UI to list the players
+			+	func processlocalavatarposition(delta): Called directly from the PlayerFrameLocal _process() function before it reads the position
+			+	func avatartoframedata() -> fd: dict of local player position state generated at each frame
+			+	func framedatatoavatar(fd): The unpacking of the remote player position state from the frame data.
+			+	static func changethinnedframedatafordoppelganger(fd, doppelnetoffset): A function used to distort the set of frame data so it can be used as a player doppelganger to see how the motions would look on the other side of a network in real time.
+		+	To avoid a huge load on the network, the PlayerFrameLocal.gd and PlayerFrameRemote.gd scripts automatically thins down the data generated by avatartoframedata() and interpolates the gaps in the data for framedatatoavatar() respectively. This depends on timestamps and estimates of network latency etc and is where the hard work needs to be done.
+
+1.	**Godot_XR_networking**
+	-	Source:	https://github.com/goatchurchprime/Godot_XR_networking
+	-	Info:	
+	+	This is a minimal working VR networking example using the https://github.com/goatchurchprime/godot_multiplayer_networking_workbench as the basis for connecting using one of the three godot networking protocols (enet, websocket or webrtc) and spawning player avatars into the space on connection. This works in Godot 3.4.
+	+	Installation
+		+	There are four addons, that have to be copied over or installed because they are not committed into this repository.
+	+	OpenXR Plugin
+		+	Open this Godot_XR_networking project, ignore errors, and use the AssetLib to install the OpenXR plugin, which will go into the Godot_XR_networking/addons/godot-openxr directory
+		+	(Alternatively, if you are on Linux, you can take advantage of the full working demo project that is committed into the addons repository by checking out https://github.com/GodotVR/godot_openxr next to your Godot_XR_networking directory before then going into the Godot_XR_networking/addons directory and executing ln -s ../../godot_openxr/demo/addons/godot-openxr/ godot-openxr to create a symlink.)
+	+	Godot XR Tools
+		+	Use the AssetLib to install the Godot XR Tools - AR and VR helper library plugin, which will go into the Godot_XR_networking/addons/godot-xr-tools directory
+		+	(Alternatively, to use a symlink, which will make it easier to update any changes to these base libraries and spot any unintentional edits check out https://github.com/GodotVR/godot-xr-tools next to your Godot_XR_networking directory before going into the Godot_XR_networking/addons directory and executing ln -s ../../godot-xr-tools/addons/godot-xr-tools/ godot-xr-tools.)
+	+	Networking workbench
+		+	The networking workbench is not in the AssetLib, so you will need to check out or download the repository https://github.com/goatchurchprime/godot_multiplayer_networking_workbench and copy its godot_multiplayer_networking_workbench/addons/player-networking directory into the Godot_XR_networking/addons directory.
+		+	(Alternatively go into the Godot_XR_networking/addons directory and execute ln -s ../../godot_multiplayer_networking_workbench/addons/player-networking/ player-networking.)
+	+	WebRTC libraries
+		+	If you also want to use WebRTC capability you will need to download the latest precompiled godot-webrtc-native-release-0.5.zip file, and copy its webrtc directory into the top level of this project so it becomes the directory Godot_XR_networking/webrtc.
+	+	Operation
+		+	The NetworkGateway dashboard appears in VR and is operable. If you set it to WebRTC via MQTT signalling, the instances should automatically connect (the as-necessary option means that the first one online becomes the server). For details of how it works (in an even more minimal example) go to the godot multiplayer networking workbench project and try it out. It very closely follows the Godot Networking documentation, except that you can try out the different configurations and protocols using an graphical user interface rather than having to hack the code.
+		+	If you don't happen to have 2 QuestVR devices you can run the second (or both) instance(s) on your PC by going to the Godot_XR_networking directory itself and executing the godot executable, and it will start up immediately without the editor.
+		+	(However to make this work properly we will probably need a keyboard simulator added.)
+
+1.	**OQ_networking**
+	-	Source:	https://github.com/goatchurchprime/OQ_networking
+	-	Info:	Oculus Quest Toolkit demo with networking capabilities
+	+	Oculus Quest Toolkit demo with networking capabilities
+	+	This depends on three directories copied over from external projects (not included) into the project top level:
+	+	Copy OQ_Toolkit/ from https://github.com/NeoSpark314/godot_oculus_quest_toolkit
+	+	Copy networking/ from https://github.com/goatchurchprime/godot_multiplayer_networking_workbench
+	+	Copy webrtc/ from https://github.com/godotengine/webrtc-native/releases (release code)
+	+	(See the https://github.com/goatchurchprime/godot_multiplayer_networking_workbench#readme for help with the webrtc library. There is a signalling method that works via MQTT so you can connect across the internet without your own server.)
+
+1.	**OQ_Avatar_Mapping**
+	-	Source:	https://github.com/goatchurchprime/OQ_Avatar_Mapping
+	-	Info:	
+	+	Motivation
+		+	A VR productivity tool (ie anything that's for work and not just a game) must be networked between players/users so that experienced people can show new people how to operate the software, since the normal method of the expert looking over the shoulder of the student and pointing things out is not possible.
+		+	But before you can network the VR players, you have to have avatars that can copy the motions of a single player's headset and controllers/hands. In some circumstances, hand-tracking could be the dominant form of UI, particularly for AR applications when interaction with the computer is not happening 100% of the time. So, for example, in a FPS game where you are using them all the time controllers are okay, but if the user is intermittently interacting with the computer, such as to change a tab every few minutes, nobody is going to want to have to keep picking them up.
+		+	Therefore, if hand-tracking is going to be part of the UI, then it has to be networked so that experts can show novices how to make the gesture-controls. And it adds to the band-width of communication between individuals at no extra cost in hardware (unlike full body tracking at the moment).
+		+	The above argument comes from lessons learned from this project: https://sidequestvr.com/app/1630/tunnelvr https://github.com/goatchurchprime/tunnelvr/
+	+	OQ_Avatar_Mapping (with specific attention to hand tracking)
+		+	Mapping from Oculus Quest (and other VR control systems) to an apparently standardized avatar used my Mozilla Hubs here https://github.com/MozillaReality/hubs-avatar-pipelines/tree/master/Blender/AvatarBot and generated by https://readyplayer.me/
+		+	Based on a copy of the OQ_Toolkit directory copied in from here: https://github.com/NeoSpark314/godot_oculus_quest_toolkit/
+		+	(It would be preferable to bring in this OQ_Toolkit dependency from the AssetLib rather than include it in this repo, but without it the project cannot be opened because it derives nodes directly from its contents.)
+		+	The binary addons vr drivers are not included, so you need to fetch the godot-openvr one from the godot AssetLib and copy the up to date binaries for godot_ovrmobile from the https://github.com/NeoSpark314/godot_oculus_quest_toolkit/tree/master/addons/godot_ovrmobile until the AssetLib one is updated.
+	+	Setup
+		+	Remember when using the OQ_Toolkit you need to set the Autoload to vr = OQ_Toolkit/vr_autoload.gd
+	+	Discussion
+		+	The fundamental bone transform equation is:
+			+	a * b = Transform(a.basis * b.basis, a.origin + a.basis * b.origin)
+		+	The translation happens first, followed by the rotation at each of the pose joints. I believe this explains why there appears to be an extra row of joints in the palm of the hand in the w3c spec: https://www.w3.org/TR/webxr-hand-input-1/#skeleton-joints-section even though there is no bending there -- it's to allow a change of frame before we hit the first row of knuckles. If the bone transforms worked the other way (first rotation, then translation), then you wouldn't need these joints.
+		+	The Quest hand model only keeps the extra palm joints for the thumb and the pinky. But since its translation vectors are in a totally different direction to the Hubs avatar hand, and there are fewer bones, it's not easily compatible.
+		+	The basic idea of this conversion is that I calculate the absolute positions of all the knuckles in the hands from the Quest api by composing these rotations with the rest bone transforms in the system model. https://developer.oculus.com/documentation/native/android/mobile-hand-tracking/?locale=en_GB Then, after aligning the wrist/palm plane as best I can in the plane defined by the index and pinky knuckles, I fold each of the avatar's bones towards the next knuckle and extend it to meet.
+		+	It works as well as I can make it, but it's sometimes horrible in the area between the thumb and index finger. I wouldn't necessarily call it a success. One may simply need to add in the Quest based hands for all avatars (with their hands switched off) and somehow find a way to copy across the skin colour.
+
+1.	**TunnelVR**
+	-	Source:	https://github.com/tunnelvr/tunnelvr
+	-	Info:	
+	+	Using the Nix Binary Cache
+		+	Add the following to your NixOS configuration, often in /etc/nixos/configuration.nix for example.
+		+	nix.binaryCachePublicKeys = [ "tunnelvr.cachix.org-1:IZUIF+ytsd6o+5F0wi45s83mHI+aQaFSoHJ3zHrc2G0=" ];
+		+	nix.binaryCaches = [ "https://tunnelvr.cachix.org" ];
+		+	nix.trustedBinaryCaches = [ "https://tunnelvr.cachix.org" ];
+	+	Introduction
+		+	TunnelVR is a follow-on from [TunnelX](https://github.com/CaveSurveying/tunnelx) -- a long-running program for drawing up cave surveys. It's based on the excellent Godot Game Engine that's used for designing Virtual Reality games on an almost plug and play basis.
+		+	Being like a game, the intention is to make drawing up cave surveys fun and collaborative.
+		+	You can make improvements to the map with your friends in VR. It is easier and more intuitive because it is in 3D from the perspective of how you see it in the real life, rather than as a technical 2D drawing with overlapping layers.
+	+	How to run
+		+	As a binary executable
+		+	Go to the releases page and download, unzip and run the binary executable for your operating system. Linux, Windows and Oculus Quest Android are available, and iOS is sometimes available when someone makes a build on a Mac.
+	+	Geometric principle
+		+	The cave is made from a series of cross sections connected by one or several lines to define a tube. When more than one line connects two cross sections, the tube is divided into sectors which can be individually coloured.
+		+	Most cross sections have a single contour. If there is more than one area defined in the cross section, then the tube connecting to the next cross section is either to a single area, or to the outer contour, depending on which nodes the connecting lines join to.
+		+	Tubes can be distorted by the addition of intermediate nodes added to the sector lines. Nodes of a cross section can be pulled out of the plane by selecting and holding down the right hand trigger on a node for 1 second, and then releasing at the appropriate position along the perpendicular line.
+		+	Side junctions are formed by setting the material of a sector to Hole (transparent), then Right hand grip while pointing at the hole to bring up the context sensitive menu, and selecting 'HoleXC' to generate a hole type cross section (with green nodes), that can be used exactly like a normal cross section, except that it is tied to the hole.
+	+	Rope type cross sections
+		+	In rope drawing mode you have a short laser with a blue spherical cursor. If you push this into a wall and pull the trigger it starts a network of rope nodes you can draw into space.
+		+	If the rope network as zero or two odd connected nodes, then it's a rope and simulates dangling down under gravity.
+		+	You can also make stalactites, rocks and signposts in rope drawing mode.
+
 1.	**Godot_XR_Tools_Bullet_Time**
 	-	Source:	https://github.com/teddybear082/Godot_XR_Tools_Bullet_Time
 	-	Info:	Provides slo-mo movement to player
@@ -235,6 +348,22 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 1.	**Godot_XR_JogInPlace_Locomotion**
 	-	Source:	https://github.com/teddybear082/Godot_XR_JogInPlace_Locomotion
 	-	Info:	Attempt at porting NeoSpark's Walk in Place Locomotion for use in Godot XR-Tools
+
+1.	**Godot-Mesh-slicer**
+	-	Source:	https://github.com/SYBIOTE/Godot-Mesh-slicer
+	-	Info:	scripts to cut mesh / rigid bodies in godot at runtime implemented in GDscript
+	+	showcase : https://www.youtube.com/watch?v=ynZVK_XyaRc.
+	+	play the demo scene to destroy the cube
+	+	Use
+		+	Once you download/copy the slicer file into your project.
+		+	There will a new node under rigid body called , sliceable.
+		+	The sliceable node needs a mesh instance with mesh
+		+	and a empty collision shape under it to function.
+		+	Provide a cutting plane to the cut_object function (in world space).
+		+	This will cut the rigid body into two rigidbodies.
+		+	added cross section materials
+	+	Bugs
+		+	bit of texture / UV distortion on the newly generated vertices
 
 1.	**Godot XR Reference plugin**
 	-	Source:	https://github.com/GodotVR/godot_xr_reference
@@ -367,6 +496,11 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	-	Source:	https://github.com/Jade1724/godot-xr-hands-on
 	-	Info:	My first Godot XR hands on project
 	+	To run this project, download it and install OpenXR Plugin locally on your machine.
+
+1.	**Godot VR Climbing demo**
+	-	Source:	https://github.com/BastiaanOlij/godot_vr_climbing_demo
+	-	Info:	Godot VR Climbing demo
+	+	This demo project is in support of my VR Climbing tutorial video on Youtube
 
 ---
 
