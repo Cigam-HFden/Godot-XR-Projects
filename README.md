@@ -6,12 +6,12 @@
 	+	[Ports](#ports)
 	+	[Unsure Source](#unsure-source)
 
-#Godot XR Projects
+# Godot XR Projects
 List of various Godot projects that utilize the older VR or newer XR addon.
 
 ---
 
-##Toolkits
+## Toolkits
 1.	**Godot XR Tools**
 	-.	Source:	https://github.com/GodotVR/godot-xr-tools
 	-.	Info:	Support scenes for AR and VR in Godot
@@ -202,7 +202,7 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 ---
 
-##Examples
+## Examples
 1.	**Godot XR Tools Experiments**
 	-.	Source:	https://github.com/Malcolmnixon/godot-xr-tools-experiments
 	-.	Info:	Experimental Project to evaluate and evolve new functionality for godot-xr-tools
@@ -371,7 +371,7 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 ---
 
-##Demos
+## Demos
 1.	**Godot 4 OpenXR demo project**
 	-.	Source:	https://github.com/BastiaanOlij/godot4_openxr_demo
 	-.	Info:	Crappy test project to test Godot 4s OpenXR implementation with
@@ -438,7 +438,7 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 ---
 
-##Games
+## Games
 1.	**VRWorkout**
 	-.	Source:	https://github.com/mgschwan/VRWorkout
 	-.	Website:	https://vrworkout.at/
@@ -636,7 +636,7 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 ---
 
-##Ports
+## Ports
 1.	**WOLF3D-Godot**
 	-.	Source:	https://github.com/BenMcLean/WOLF3D-Godot
 	-.	Info:	Wolfenstein 3-D recreated in Godot Mono for the Oculus Quest
@@ -661,7 +661,7 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 
 ---
 
-##Unsure Source
+## Unsure Source
 
 1.	**The Impossible Crypt**
 	-.	Website:	https://neospark314.itch.io/the-impossible-crypt
