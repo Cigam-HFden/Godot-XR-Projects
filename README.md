@@ -365,6 +365,19 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	Bugs
 		+	bit of texture / UV distortion on the newly generated vertices
 
+1.	**VR-gesture-recognition-godot**
+	-	Source:	https://github.com/SYBIOTE/VR-gesture-recognition-godot
+	-	Info:	a module for gesture recognition in vr for godot
+	+	uses the $p recognizer , modified for 3d
+	+	demonstration: https://youtu.be/tnYyMb3XGeg
+	+	this module was made with the oculus vr toolkit for godot https://github.com/NeoSpark314/godot_oculus_quest_toolkit
+	+	and the gesture recognition algorithm used is the $p algorithm modified for 3d the vr_player scene, contains the p_recog_tracked object, this is the object which is tracked through 3d space
+	+	in idle state press the index trigger to start tracking and enter recognize mode any movement is tracked and once the index trigger is released tracking stops and puts the user back into idle state and the system attempts to recongnise the movement
+	+	there are no pre made templates the add button , puts the user in add mode the next tracked movement will be made into a template
+	+	the cancel button allows the user to exit add mode
+	+	the delete button deletes all templates
+	+	in the the source code, there are two nodes , p_recog_tracked object dev and p_recog_tracked object game dev allows for adding and subtracting templates and storing them into a file for further use game only allows you to load prexisting templates saved by dev and utilize them
+
 1.	**Godot XR Reference plugin**
 	-	Source:	https://github.com/GodotVR/godot_xr_reference
 	-	Info:	Reference implementation for Godot 4 XR plugins
@@ -766,6 +779,18 @@ List of various Godot projects that utilize the older VR or newer XR addon.
 	+	As this was intended as a quick prototype for jog in place locomotion the code is not very clean yet and a lot of shortcuts were taken during development. Feel free to dig into the details here but do not expect it to be a good reference on how to build a VR game.
 	+	Starting/Developing on Desktop
 		+	Voxel Works Quest uses a modified version of the Godot Voxel Module that needs to be compiled together with the godot engine editor. For an easier start in getting to run this game I have included a prebuild version of the editor (windows only) with the correct voxel engine for windows in the releases of this repository. This should allow to open and run the project without the need to compile godot and the module yourself.
+
+1.	**Dungeon master VR**
+	-	Source:	https://github.com/SYBIOTE/dungeon-master-VR
+	-	Website:	https://sybiote.itch.io/dungeon-master-vr
+	-	Info:	a short dungeon crawler vr game built for the oculus platform
+	+	this is a short vr game built with the oculus quest toolkit: https://github.com/NeoSpark314/godot_oculus_quest_toolkit
+	+	game play video: https://youtu.be/fpFXgZWejm0
+	+	same gameplay as dungeon master pc, basic dungeon crawler with enemy slimes
+	+	use the correct element to beat the slimes 
+	+	open doors and unlock with left hand 
+	+	sword in right hand 
+	+	this is my first vr game so, there are some obvious bugs
 
 ---
 
